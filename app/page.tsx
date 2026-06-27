@@ -38,7 +38,7 @@ export default function Page() {
       <Hero />
 
       {/* Main content */}
-      <div className="max-w-6xl mx-auto px-4 py-12 space-y-8">
+      <div className="max-w-6xl mx-auto px-3 sm:px-4 py-8 sm:py-12 space-y-6 sm:space-y-8">
         {/* Password input card */}
         <section>
           <PasswordInputCard
@@ -52,7 +52,7 @@ export default function Page() {
         {analysis && (
           <>
             {/* Strength meter and checklist */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-8">
               <section>
                 <StrengthMeter analysis={analysis} />
               </section>
@@ -87,6 +87,7 @@ export default function Page() {
             </section>
           </>
         )}
+
       </div>
 
       {/* Footer */}
