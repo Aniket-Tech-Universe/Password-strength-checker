@@ -3,6 +3,13 @@
 import { Lock, Shield } from 'lucide-react'
 
 export function Hero() {
+  const handleStartAnalyzing = () => {
+    const element = document.getElementById('password-input')
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
+
   return (
     <div className="relative min-h-[92svh] md:min-h-screen flex flex-col items-center justify-center overflow-hidden px-4 sm:px-6 py-16 sm:py-20">
       {/* Animated background gradient */}
@@ -41,10 +48,10 @@ export function Hero() {
 
         {/* CTA Button */}
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-12 sm:mb-16">
-          <button className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl glow-purple">
+          <button onClick={handleStartAnalyzing} className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl glow-purple">
             Start Analyzing
           </button>
-          <button className="w-full sm:w-auto px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/20 text-foreground font-semibold rounded-lg transition-all duration-300 backdrop-blur-sm">
+          <button onClick={handleStartAnalyzing} className="w-full sm:w-auto px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/20 text-foreground font-semibold rounded-lg transition-all duration-300 backdrop-blur-sm">
             Learn More
           </button>
         </div>

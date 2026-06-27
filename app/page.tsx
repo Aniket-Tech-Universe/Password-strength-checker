@@ -40,7 +40,7 @@ export default function Page() {
       {/* Main content */}
       <div className="max-w-6xl mx-auto px-3 sm:px-4 py-8 sm:py-12 space-y-6 sm:space-y-8">
         {/* Password input card */}
-        <section>
+        <section id="password-input">
           <PasswordInputCard
             password={password}
             onPasswordChange={setPassword}
